@@ -1,8 +1,11 @@
 import React from 'react';
+import './AngelosCss/SignUpForm.css'
 
 function SignUpForm() {
     return (
-        <form>
+
+        <form className='signup-form'>
+            <h2 className='signup-now-title'>Sign Up Now!</h2>
             <input type='text' placeholder='First Name'></input>
             <br />
             <input type='text' placeholder='Last Name'></input>
