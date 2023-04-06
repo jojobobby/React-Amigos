@@ -3,7 +3,6 @@ import './AngelosCss/SignUpForm.css'
 
 function SignUpForm() {
     return (
-
         <form className='signup-form'>
             <h2 className='signup-now-title'>Sign Up Now!</h2>
             <input type='text' placeholder='First Name'></input>
