@@ -1,4 +1,4 @@
-
+import './LizsPage.css';
 import './App.css';
 
 
