@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
@@ -6,19 +5,18 @@ function BenPage() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />   */}
-        <p class="ben-title">
-         Ben's Page
-        </p>
-        <BenButton />
+        <p className="ben-title"> Ben's Page </p>
       </header>
+        <BenButton />
     </div>
   );
 }
 
 function BenButton() {
   return (
-    <button class="ben-button">Don't Touch This Button</button>
+    <div className="ben-button-div">
+      <button className="ben-button">Don't Touch This Button</button>
+    </div>
   )
 }
 
