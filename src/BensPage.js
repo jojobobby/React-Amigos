@@ -3,31 +3,23 @@ import './App.css';
 import React, { useState } from 'react';
 
 function BenPage() {
-  const [showPage, setShowPage] = useState(false);
-
-  const togglePage = () => {
-    setShowPage(!showPage);
-  }
-  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Bens Page
+        {/* <img src={logo} className="App-logo" alt="logo" />   */}
+        <p class="ben-title">
+         Ben's Page
         </p>
-
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BenButton />
       </header>
     </div>
   );
+}
+
+function BenButton() {
+  return (
+    <button class="ben-button">Don't Touch This Button</button>
+  )
 }
 
 export default BenPage;
