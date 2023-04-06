@@ -6,10 +6,11 @@ import SignUpForm from './AngelosComponents/SignUpForm';
 
 function AngeloPage() {
     return (
-        <div>
+        <React.Fragment>
             <h1>Angelo's Page</h1>
             <SignUpForm />
-        </div>
+        </React.Fragment>
+        
     );
 
 }
