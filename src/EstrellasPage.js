@@ -3,63 +3,19 @@ import './App.css';
 import React, { useState } from 'react';
 
 function Board() {
-  
+  const candy = ['starburst', 'skittes', 'm&m', 'WarHeads'];
+
+  const colors ={
+    Sammy : "beige",
+    Estrella : "Purple",
+    Liz: "red"
+  };
+
   return (
-    <div className='board'>
-        <h1 className='title'>Tic Tac Toe</h1>
-      <div>
-        <Square />
-        <Square />
-        <Square />
-      </div>
-
-      <div>
-        <Square />
-        <Square />
-        <Square />
-      </div>
-
-      <div>
-        <Square />
-        <Square />
-        <Square />
-      </div>
-
-      <Array />
-      <Object />
-
-    </div>
-  )
-
-  }
-
-  function Array(){
-    const candy = ['starburst', 'skittes', 'm&m', 'WarHeads'];
+    console.log(colors),
     console.log(candy)
-  }
-
-  function Object () {
-    const colors ={
-      Sammy : "beige",
-      Estrella : "Purple",
-      Liz: "red"
-    }
-
-    console.log(colors);
-  }
-
-  function Square (){
-
-    const [value, setValue] = useState(null);
-
-    function handleClick(){
-      setValue('X');
-    }
-
-    return(
-        <button className='square' onClick={handleClick}>{value}</button>
-    )
-  }
+  );
+  };
 
 
 
