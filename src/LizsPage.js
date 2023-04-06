@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
-import React, { useState } from 'react';
+
 
 function LizPage() {
-  
+  const adoptablePets = ["Ripley", "Sol", "Omar", "Heinz", "Tyrone", "Ford", "Zamara", "Darwin"];
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src= 'https://picsum.photos/id/237/200' className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Meet adoptable pets and complete the application process. Help us find homes for Chicago's homeless pets! 
+        Services: Pet Adoption, Fostering, Volunteering.
         </p>
+        {adoptablePets.map(pet => (
+           <h1> {pet} </h1>
+        ))}
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.pawschicago.org/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Apdopt Me!
         </a>
       </header>
     </div>
