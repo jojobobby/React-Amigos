@@ -1,27 +1,66 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 
-function EstrellaPage() {
+function Board() {
   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Estrella Page
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className='board'>
+        <h1 className='title'>Tic Tac Toe</h1>
+      <div>
+        <Square />
+        <Square />
+        <Square />
+      </div>
 
-export default EstrellaPage;
+      <div>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+
+      <div>
+        <Square />
+        <Square />
+        <Square />
+      </div>
+
+      <Array />
+      <Object />
+
+    </div>
+  )
+
+  }
+
+  function Array(){
+    const candy = ['starburst', 'skittes', 'm&m', 'WarHeads'];
+    console.log(candy)
+  }
+
+  function Object () {
+    const colors ={
+      Sammy : "beige",
+      Estrella : "Purple",
+      Liz: "red"
+    }
+
+    console.log(colors);
+  }
+
+  function Square (){
+
+    const [value, setValue] = useState(null);
+
+    function handleClick(){
+      setValue('X');
+    }
+
+    return(
+        <button className='square' onClick={handleClick}>{value}</button>
+    )
+  }
+
+
+
+export default Board;
