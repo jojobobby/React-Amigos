@@ -10,18 +10,18 @@ function SignUpForm() {
         email: "",
         password: "",
         confirmPassword: ""
-    })
+    });
 
 
-    const getSignUpInfo = (event) => {
+    const signUp = (event) => {
         event.preventDefault();
 
-        console.log("Sign Up Credentials", formInputValues);
+        console.log("Sign Up Successful", formInputValues);
         setLoginForm(true);
 
     }
 
-    const setFormInfo = (event) =>{
+    const setUserInfo = (event) =>{
         setFormValues({...formInputValues,[event.target.name]: event.target.value})
     }
 
@@ -35,17 +35,17 @@ function SignUpForm() {
     }
 
     return (
-        <form className='signup-form' onSubmit={getSignUpInfo}>
+        <form className='signup-form' onSubmit={signUp}>
             <h2 className='signup-now-title' >Sign Up Now!</h2>
             <input type='text' name='firstName' placeholder='First Name' value={formInputValues.firstName} onChange={setFormInfo} />
             <br />
-            <input type='text' name='lastName' placeholder='Last Name' value={formInputValues.lastName} onChange={setFormInfo}></input>
+            <input type='text' name='lastName' placeholder='Last Name' value={formInputValues.lastName} onChange={setUserInfo}></input>
             <br />
-            <input type='email'  name='email' placeholder='Email' value={formInputValues.email} onChange={setFormInfo}></input>
+            <input type='email'  name='email' placeholder='Email' value={formInputValues.email} onChange={setUserInfo}></input>
             <br />
-            <input type='password' name='password' placeholder='Password' value={formInputValues.password} onChange={setFormInfo}></input>
+            <input type='password' name='password' placeholder='Password' value={formInputValues.password} onChange={setUserInfo}></input>
             <br />
-            <input type='password'  name='confirmPassword' placeholder='Confirm Password' value={formInputValues.confirmPassword} onChange={setFormInfo}></input>
+            <input type='password'  name='confirmPassword' placeholder='Confirm Password' value={formInputValues.confirmPassword} onChange={setUserInfo}></input>
             <br />
             <button type='submit'>Sign Up</button>
         </form>
