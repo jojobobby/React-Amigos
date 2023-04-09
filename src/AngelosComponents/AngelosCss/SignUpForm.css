@@ -37,3 +37,9 @@ button:hover {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+
+.signup-error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
