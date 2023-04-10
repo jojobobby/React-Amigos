@@ -12,10 +12,10 @@ function LoginForm() {
     return (
         <form className='loginForm' onSubmit={loginButton}>
             <h2 className='login-now-title' >Login</h2>
-            <input type='email'></input>
+            <input className = "login-input" type='email'></input>
             <br />
-            <input type='password'></input>
-            <button >Login</button>
+            <input className='login-input' type='password'></input>
+            <button id="login-button" >Login</button>
         </form>
     )
 }
