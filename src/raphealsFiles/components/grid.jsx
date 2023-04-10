@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import Square from './square';
 //JSX Expression that calls to react create component
 class Grid extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         const cssCauseImLazy = {
             width:'120px',
             height:'120px'
         }
 
-        this.valueArray = [0,1,2,3,4,5,5,6,7,3,2,4,5, <img style={cssCauseImLazy} src="https://www.digitalocean.com/_next/static/media/intro-to-cloud.d49bc5f7.jpeg" ></img>];
+        this.valueArray = this.props.valueArray;
         this.grid = this.generateSquares();
 
         this.generateSquares.bind(this)
@@ -19,8 +19,8 @@ class Grid extends Component {
 
     styles = { 
         display:'grid',
-        gridTemplateColumns: 'repeat(8, 120px)',
-        gridTemplateRows: 'repeat(8, 120px)',
+        gridTemplateColumns: 'repeat(3, 120px)',
+        gridTemplateRows: 'repeat(3, 120px)',
         justifyContent: 'center'
     }
 
