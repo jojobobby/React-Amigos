@@ -15,7 +15,7 @@ function App() {
       <nav>
         <ul>
           <li styles="display:flex; justify-content: space-inbetween">
-            <Link to="/BensPage">Lil Huncho's Page</Link>
+            <Link to="/BensPage">YB24's Page</Link>
             <Link to="/AngelosPage">Swipper's Page</Link>
             <Link to="/DemariasPage">Damaria's Page</Link>
             <Link to="/EstrellasPage">Starsii's Page</Link>
