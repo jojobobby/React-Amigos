@@ -56,18 +56,3 @@ nav ul li a:hover {
 .main-content {
   margin-top: 1rem;
 }
-
-/* Ben's CSS */
-
-.ben-title {
-  display: block;
-  background-color: yellow;
-  text-align: center;
-}
-
-.ben-button-div {
-  background-color: black;
-  text-align: center;
-}
-
-
