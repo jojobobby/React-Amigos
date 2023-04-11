@@ -26,3 +26,15 @@ export const signUpFormValidation = (formInputValues) => {
 
     return errors;
 }
+
+export const loginFormValidation = (formInputValues) =>{
+    let errors = {};
+    if(!formInputValues.email.trim()){
+        errors.email = "Email is Required";
+    }else if(!/\S+@\S+\.\S+/.test(formInputValues.email)){
+        errors.email = "Not a Valid Email Address"
+    }
+    if(!formInputValues.password.trim()){
+        errors.password = "Must Enter Password";
+    }
+}

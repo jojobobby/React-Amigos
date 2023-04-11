@@ -17,8 +17,8 @@ class Square extends Component {
         alignItems: 'center',
         border: '2px solid gray',
         padding: '25px',
-        width: '120px',
-        height: '120px',
+        width: '180px',
+        height: '180px',
     }
 
     changeValue = () => {
@@ -27,19 +27,19 @@ class Square extends Component {
         if (active)
             return;
 
-        this.setState({value: this.props.value})
-        active = true;   
+        this.setState({ value: this.props.value })
+        active = true;
     }
 
-    render () {
+    render() {
         return (
             <React.Fragment>
                 <square style={this.style} onClick={this.changeValue}>
                     <>{this.state.value}</>
                 </square>
             </React.Fragment>
-        )  
+        )
     }
 }
- 
+
 export default Square;
