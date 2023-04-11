@@ -63,16 +63,3 @@ nav ul li a:hover {
   text-align: center;
   margin-bottom: 30px;
 }
-
-.board{
-  margin: auto;
-  text-align: center;
-  width: 50%;
-  border: 3px solid green;
-  padding: 50px;
-}
-
-.square{
-  width: 100px;
-  height: 100px;
-}
