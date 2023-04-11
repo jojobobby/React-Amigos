@@ -5,6 +5,7 @@
     margin: 40px auto;
     border: 2px solid white;
     background-color: black;
+    overflow: hidden;
 }
 
 #jet{
@@ -26,4 +27,23 @@
     background: url(alienship.png);
     background-size: contain;
     background-repeat:no-repeat;
+}
+
+.bullets{
+    position: absolute;
+    bottom: 40px;
+    left:51px;
+    width: 30px;
+    height: 30px;
+    background: url(bullet2.png);
+    background-size: contain;
+    background-repeat:no-repeat;  
+}
+
+.points{
+  position: absolute;  
+  top:0px;
+  margin: 40px;
+  opacity:0.7 ;
+  color: black;
 }

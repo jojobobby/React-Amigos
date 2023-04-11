@@ -9,6 +9,35 @@ window.addEventListener("keydown",(e)=>{
     else if (e.key == "ArrowRight" && left <= 460){
         jet.style.left = left + 10 + "px";
     }
+
+    if(e.key == "ArrowUp" || e.keyCode == 32){
+        var bullet = document.createElement("div");
+        bullet.classList.add("bullets");
+        board.appendChild(bullet);
+    
+
+    var movebullet = setInterval(()=>{
+        var rocks = document.getElementsByClassName("rocks");
+        for(var i=0; i<rocks.length;i++){
+            var rock = rocks[i];
+            var rockbound = rock.getBoundingClientRect();
+            var bulletbound = bullet.getBoundingClientRect();
+            if(
+                bulletbound.left >= rockbound.left &&
+                bulletbound.right <= rockbound.right &&
+                bulletbound.top <= rockbound.top &&
+                bulletbound.bottom <= rockbound.bottom
+                ){
+                    rock.parentElement.removeChild(rock);
+                    document.getElementsByClassName("points").innerHTML = parseInt(document.getElementsByClassName("points").innerHTML) + 1;
+                }
+            }
+
+        var bulletbottom = parseInt(window.getComputedStyle(bullet).getPropertyValue("bottom"));
+        bullet.style.left = left + "px";
+        bullet.style.bottom = bulletbottom + 3 + "px";
+    })
+    }
 })
 
 var generaterocks = setInterval(()=>{
@@ -27,7 +56,13 @@ var moverocks = setInterval(()=>{
             var rock = rocks[i];
             var rocktop = parseInt(window.getComputedStyle(rock).getPropertyValue("top"));
             
-            rock.style.top = rocktop + 20 + "px";
+            if(rocktop >= 475){
+                alert("Game Over");
+                clearInterval(moverocks);
+                window.location.reload();
+            }
+
+            rock.style.top = rocktop + 25 + "px";
         }
     }
 }, 450);
