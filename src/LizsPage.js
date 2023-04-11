@@ -46,7 +46,7 @@ function LizPage() {
         </p>
         {adoptablePets.map(pet => (
           <div>
-           <h3> {`Name: ${pet.name} Type: ${pet.type}`}</h3>
+           <p> {`Name: ${pet.name} Type: ${pet.type}`}</p>
           </div>
         ))}
         <a
