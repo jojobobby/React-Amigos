@@ -27,14 +27,14 @@ export const signUpFormValidation = (formInputValues) => {
     return errors;
 }
 
-export const loginFormValidation = (formInputValues) =>{
+export const loginFormValidation = (userLoginInfo) =>{
     let errors = {};
-    if(!formInputValues.email.trim()){
+    if(!userLoginInfo.email.trim()){
         errors.email = "Email is Required";
-    }else if(!/\S+@\S+\.\S+/.test(formInputValues.email)){
+    }else if(!/\S+@\S+\.\S+/.test(userLoginInfo.email)){
         errors.email = "Not a Valid Email Address"
     }
-    if(!formInputValues.password.trim()){
+    if(!userLoginInfo.password.trim()){
         errors.password = "Must Enter Password";
     }
 }

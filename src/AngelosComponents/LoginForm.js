@@ -20,7 +20,7 @@ function LoginForm() {
     const [errors,setErrors] = useState({});
     const login = (event) => {
         event.preventDefault();
-        const errors = loginFormValidation(LoginForm);
+        const errors = loginFormValidation(userLoginInfo);
         setErrors(errors);
 
         console.log("Login Successful!", userLoginInfo)
