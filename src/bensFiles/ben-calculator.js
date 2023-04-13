@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ben-calc-styles.css'; 
 
-function myCalculator() {
+function MyCalculator() {
   const [calc, setCalc] = useState("");
   const [result, setResult] = useState("");
 
@@ -50,7 +50,7 @@ function myCalculator() {
   }
 
   return (
-    <div className="App">
+    <div className="calc-app">
       <div className="calculator">
         <div className="display">
           {result ? <span> ({result}) </span> : '' }
@@ -77,4 +77,4 @@ function myCalculator() {
 }
 
 
-export default myCalculator;
+export default MyCalculator;
