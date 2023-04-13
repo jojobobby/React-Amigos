@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 import Form from "./Form";
 
 const LoginForm = function () {
+    //the email and password will be changed on button click for the login page.
+    //just displaing it here to use later.
     const [value, setValues] = useState({
         email:"",
         password:""
     })
 
+    //The call back that will be passed into the button on click
     let AttemptLogin = (e) => {
         e.preventDefault();
-
     }
     
+    //styling that will be passed to the button and the input
     const style = {
         input: {
             title: {
@@ -28,6 +31,7 @@ const LoginForm = function () {
         }
     };
 
+    //A collection of components made to make creating forms easier.
     return (
         <Form.Panel width={"500px"} content={
             <React.Fragment>

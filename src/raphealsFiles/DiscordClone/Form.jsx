@@ -7,7 +7,10 @@ import "./Website.css";
     default - text
 */
 
+//Panel is for the background of a form, 
+//you start with a panel and pass in form children as a content prop
 const Panel = function (props) {
+    //Styles
     const width = props.width;
     const content = props.content;
     const style = {
@@ -36,6 +39,8 @@ const Input = function (props) {
     const styles = props.style ? props.style : {};
     let type = props.type;
 
+    //Styling for the input and title, 
+    //both can be modified through the style prop if you want to pass in different values
     const style = {
         input: {
             alignText: "center",
@@ -58,6 +63,8 @@ const Input = function (props) {
             ...styles.title}
     }   
 
+    //Switching the type for the input,
+    //could have made this simplier but I feel this way I can add different types of forms in a clear view.
     switch (type) {
         case 1:
             type = "password"
@@ -67,6 +74,9 @@ const Input = function (props) {
         break;
     }
 
+
+    //The single Input Title and Input box
+    //div is not necessary but could be nice to use for when I start using the BEM css method
     return (
         <React.Fragment>
             <div id="Input-Box">
@@ -78,9 +88,10 @@ const Input = function (props) {
 }
 
 const Button = function (props) {
+    //Callback for when the button is clicked.
     const callback = props.callback;
+    //Styles
     const styles = props.style ? props.style : {};;
-
     const style = {
         backgroundColor: '#007aff',
         borderRadius: '8px',
@@ -115,6 +126,7 @@ const Button = function (props) {
         ...styles
     }
 
+    //This "Login" in the button tag will be changed to {displayName} that will be passed in through props.
     return (
        <button style={style} onClick={callback}>Login</button>
     )
