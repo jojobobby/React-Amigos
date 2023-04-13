@@ -6,11 +6,6 @@ class Grid extends Component {
     constructor(props) {
         super(props)
 
-        const cssCauseImLazy = {
-            width:'120px',
-            height:'120px'
-        }
-
         this.valueArray = this.props.valueArray;
         this.grid = this.generateSquares();
 
