@@ -32,7 +32,12 @@
   #login-button:hover {
     background-color: #0062cc;
   }
-  
+
+  .login-error {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
   .login-now-title {
     font-size: 1.5rem;
     margin-bottom: 20px;

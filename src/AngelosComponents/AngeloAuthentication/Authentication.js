@@ -37,4 +37,5 @@ export const loginFormValidation = (userLoginInfo) =>{
     if(!userLoginInfo.password.trim()){
         errors.password = "Must Enter Password";
     }
+    return errors;
 }
