@@ -1,39 +1,36 @@
 import './EstrellaPage.css';
+import data from './data.js';
 
 function EstrellaPage() {
-  
+  // {openSpots === 0 && <div className='card-Badge'>SOLD OUT</div>}
+  const cardElements = data.map(item => {
+    return(
+    <Card
+      img={item.img}
+      rating={item.rating}
+      title={item.title}
+      openSpots={item.openSpots}
+    />
+    )
+  })
+
   return (
     <div>
       <Header />
       <Hero />
-
       <div className='card-row'>
-        <Card 
-          img = "./bean.webp"
-          rating= "4.0"
-          title = "Bean"
-        />
-        <Card 
-          img = "./chiSkyline.jpeg"
-          rating= "5.0"
-          title = "SKyLine View"
-        />
-        <Card 
-          img = "./IceCream.jpeg"
-          rating = "3.8"
-          title = "Ice Cream Museum"
-        />
+        {cardElements}
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
-  );
-}
+  )
+};
 
 function Header(){
     return (
       <header>
         <nav className="nav">
-          <img src= "./airbnbLogo.png" className='airbnb-Logo' />
+          <img src= "./estrellaImages/airbnbLogo.png" className='airbnb-Logo' />
         </nav>
       </header>
     )
@@ -42,7 +39,7 @@ function Header(){
 function Hero(){
     return (
       <div className='Hero-Content'>
-          <img src='./chiSkyline.jpeg' className='chi-Skyline' />
+          <img src="./estrellaImages/chiSkyline.jpeg" className='chi-Skyline' />
 
           <h1 className='hero-header'>Online Experince</h1>
 
@@ -59,11 +56,12 @@ function Hero(){
 
 function Card({img, rating, title}){
     return(
-      <div class='row'>
+      <div class='card'>
+        <div className='card-Badge'>SOLD OUT</div>
          <div>
             <img src={img} className='card-Skyline' />
               <div>
-                <span><img src='./pinkStar.webp' className='star'/></span>
+                <span><img src='./estrellaImages/pinkStar.webp' className='star'/></span>
                 <span>{rating}</span>
                   <div>
                     <span>{title}</span>
@@ -73,7 +71,6 @@ function Card({img, rating, title}){
       </div>
     )
 }
-
 
 function Footer(){
     return (
