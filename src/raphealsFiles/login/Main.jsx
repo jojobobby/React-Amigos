@@ -18,8 +18,6 @@ const LoginForm = function () {
     
     //Tempted to remove this...
     //And just put it inside a css file using bem methodoligy on top of its default.
-    //so like, className={}
-    //styling that will be passed to the button and the input
     const style = {
         input: {
             title: {
