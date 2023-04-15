@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
-import { ReactDOM } from 'react';
-import LoginForm from './raphealsFiles/DiscordClone/Login';
+import React from 'react';
+import LoginForm from './raphealsFiles/login/Main';
+import "./raphealsFiles/login/Login.css";
 
 function Website() {
-  //Syling for the content
-  const style = {
-    display: "flex",
-    justifyContent: "center"
-  }
 
   //Returns a JSX element that contains a Login Form component.
   return (
-    <div style={style}>
-      <LoginForm/>
-    </div>
+      <div className="body body__background">
+        <LoginForm/>
+      </div>
   );
 }
 

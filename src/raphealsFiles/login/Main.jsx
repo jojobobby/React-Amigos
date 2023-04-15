@@ -12,31 +12,43 @@ const LoginForm = function () {
     //The call back that will be passed into the button on click
     let AttemptLogin = (e) => {
         e.preventDefault();
+
+
     }
     
+    //Tempted to remove this...
+    //And just put it inside a css file using bem methodoligy on top of its default.
+    //so like, className={}
     //styling that will be passed to the button and the input
     const style = {
         input: {
             title: {
                 marginTop: '5px',
+                marginBottom: '0px',
                 outerHeight: '5px'
             },
-            input: {
-                marginTop: '5px'
+            field: {
+                marginBottom: '12px'
             }
         },
         button: {
-          margin: '25px'
+          margin: '25px 0px 0px 0px'
+        },
+        panel: {
+            title: {
+                marginBottom: '35px',
+                outerHeight: '5px'
+            }
         }
     };
 
     //A collection of components made to make creating forms easier.
     return (
-        <Form.Panel width={"500px"} content={
+        <Form.Panel title="Authentication" style={style} width={"480px"} children={
             <React.Fragment>
-                <Form.Input style={style.input} name="email" title="Email" placeholder="Enter Email"/>
-                <Form.Input style={style.input} name="password" title="Password" placeholder="Enter Password" type="1"/>
-                <Form.Button style={style.button} callback={AttemptLogin}>Login</Form.Button>
+                <Form.Input style={style} name="email" title="Email" placeholder="Enter Email" type={6}/>
+                <Form.Input style={style} name="password" title="Password" placeholder="Enter Password" type={1}/>
+                <Form.Button style={style} callback={AttemptLogin}>Login</Form.Button>
             </React.Fragment>
         }></Form.Panel>
     )
