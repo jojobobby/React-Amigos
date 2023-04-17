@@ -1,5 +1,7 @@
 import './EstrellaPage.css';
 import data from './data.js';
+import travelData from "./travelJour.js"
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function EstrellaPage() {
   // {openSpots === 0 && <div className='card-Badge'>SOLD OUT</div>}
@@ -9,8 +11,20 @@ function EstrellaPage() {
       img={item.img}
       rating={item.rating}
       title={item.title}
-      openSpots={item.openSpots}
+      // openSpots={item.openSpots}
     />
+    )
+  })
+
+  const travelCards = travelData.map(item => {
+    return(
+      <TravelJour
+        img = {item.img}
+        location = {item.location}
+        title= {item.title}
+        date={item.date}
+        descr={item.descr}
+      />
     )
   })
 
@@ -21,7 +35,11 @@ function EstrellaPage() {
       <div className='card-row'>
         {cardElements}
       </div>
-      <Footer />
+      <div>
+        {travelCards}
+      </div>
+      {/* <Footer /> */}
+
     </div>
   )
 };
@@ -57,7 +75,7 @@ function Hero(){
 function Card({img, rating, title}){
     return(
       <div class='card'>
-        <div className='card-Badge'>SOLD OUT</div>
+        {/* <div className='card-Badge'>SOLD OUT</div> */}
          <div>
             <img src={img} className='card-Skyline' />
               <div>
@@ -70,6 +88,23 @@ function Card({img, rating, title}){
          </div>
       </div>
     )
+}
+
+function TravelJour ({img, location, title, date, descr}) {
+  return (
+  <div className='travel-card'>
+    <span className='img-span'>
+      <img src={img} className='travelImg' />
+    </span>
+    <span className='card-info'>
+      <img src='./estrellaImages/pin.png' className='pin'/>
+      <p className='location'>{location}</p>
+      <h3 className='travel-Title'>{title}</h3>
+      <p className='travel-date'>{date}</p>
+      <p className='description'>{descr}</p>
+    </span>
+  </div>
+  )
 }
 
 function Footer(){
