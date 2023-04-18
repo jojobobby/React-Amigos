@@ -3,8 +3,8 @@ import './ben-scoreboard.css';
 
 function Header(props) { 
   return (
-    <header>
-      <h1>{ props.title }</h1>
+    <header className='sb-header'>
+      <h1 className='sb-title'>{ props.title }</h1>
       <span className='stats'>Players: { props.totalPlayers }</span>
     </header>
  );
@@ -55,7 +55,7 @@ class Counter extends React.Component {
   }
 }
 
-class App extends React.Component {
+class SB extends React.Component {
 
   state = {
     players: [
@@ -105,4 +105,4 @@ class App extends React.Component {
   };
 }
 
-export default App;
+export default SB;
