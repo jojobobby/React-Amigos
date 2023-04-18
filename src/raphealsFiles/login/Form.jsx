@@ -10,12 +10,12 @@ const Panel = function (props) {
     const title = props.title ? props.title : "Panel";
     const panelStyles = {...styles.panel.background, ...width};
     const titleStyles = {...styles.panel.title};
+    const themes = props.theme;
 
-    
     //Panel Title and Panel Box JSX element.
     return (
-      <div style={panelStyles} className="panel">
-           <h2 className="panel__Title" style={titleStyles}>{title}</h2>
+      <div style={panelStyles} className={`panel ${themes}`}>
+           <h2 className={`panel__Title ${themes}`} style={titleStyles}>{title}</h2>
            {children}
       </div>
     )
@@ -30,13 +30,15 @@ const Input = function (props) {
     const type = Utils.InputTypeConverter(props.type);
     const titleStyles = {...styles.input.title};
     const inputStyles = {...styles.input.field};
+    const themes = props.theme;
+    const onChange = props.onChange;
 
     //Input Title and Input Box JSX element.
     return (
         <React.Fragment>
             <div>
-                <h2 className="panel__inputTitle" style={titleStyles}>{title}</h2>
-                <input className="panel__inputField" style={inputStyles} type={type} name={name} placeholder={placeholder}/>
+                <h2 className={`panel__inputTitle ${themes}`}  style={titleStyles} onChange={onChange} >{title}</h2>
+                <input className={`panel__inputField ${themes}`} style={inputStyles} type={type} name={name} placeholder={placeholder} onChange={onChange}/>
             </div>
         </React.Fragment>
     )
@@ -45,12 +47,14 @@ const Input = function (props) {
 const Button = function (props) {
     //Callback for when the button is clicked.
     const callback = props.callback;
+    const name = props.name;
     const styles = props.style ? props.style : {};
-    const buttonStyles = {...styles.button}
+    const buttonStyles = {...styles.button};
+    const themes = props.theme;
 
     //Button JSX element.
     return (
-       <button className="panel__button" style={buttonStyles} onClick={callback}>Login</button>
+       <button className={`panel__button ${themes}`} style={buttonStyles} onClick={callback}>{name}</button>
     )
 }
 
