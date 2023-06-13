@@ -17,8 +17,8 @@ export const aSlice = createSlice({
         ChangeLogged_In: (state) => {
             state.Logged_In = !state.Logged_In;
         },
-        ActiveNightmode: (state, action) => {
-            state.Nightmode = action.payload;
+        ActiveNightmode: (state) => {
+            state.Nightmode = !state.Nightmode;
         }
     }
 })

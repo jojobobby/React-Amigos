@@ -9,13 +9,13 @@ function App() {
       <nav>
         <ul>
           <li styles="display:flex; justify-content: space-inbetween">
-            <Link to="/Dashboard">Dashboard</Link>
+            <Link to="/">Dashboard</Link>
             <Link to="/Login">Login</Link>
           </li>
         </ul>
       </nav>
       <Routes>
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
     </Router>
