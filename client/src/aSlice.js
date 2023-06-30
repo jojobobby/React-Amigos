@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    Name: "None",
+    UserName: "None",
     Password: "None",
     Logged_In: false,
     Nightmode: false
@@ -16,6 +16,9 @@ export const aSlice = createSlice({
         },
         ChangeLogged_In: (state) => {
             state.Logged_In = !state.Logged_In;
+        },
+        ChangeUserName:(state,action)=>{
+            state.UserName = action.payload
         },
         ActiveNightmode: (state) => {
             state.Nightmode = !state.Nightmode;

@@ -8,10 +8,10 @@ function Dashboard() {
   const dispatch = useDispatch();
 
   return (
-    <React.Fragment>
-      <p>Trial: {a.Name}</p>
-      <button onClick={(e) => {dispatch(ActiveNightmode)}}>Night Mode</button>
-   </React.Fragment>
+      <div className='body'>
+        <p>Trial: {a.Name}</p>
+        <button onClick={(e) => {dispatch(ActiveNightmode)}}>Night Mode</button>
+      </div>
   );
 }
 

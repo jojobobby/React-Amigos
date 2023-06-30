@@ -27,8 +27,8 @@ export default () => {
 
   return (
       <div className={`body body__background--${nightTheme} ${nightTheme}`}>
-        <button className={`panel__button mode--button ${nightTheme}`} onClick={() => {useDarkTheme(!darkTheme)}}>{themeButton}</button>
-        <LoginForm themes={nightTheme}/>
+        <div></div>
+
       </div>
   );
 }

@@ -2,20 +2,21 @@
     background-image: url("Assets/lightModeV2.jpg");
     background-size: cover;
     background-repeat: no-repeat; 
-    height: calc(100vh - 44px);
+    height: 100vh
 }
 
 .body__background--dark-mode {
     background-image: url("Assets/darkModeV2.jpg");
     background-size: cover;
     background-repeat: no-repeat; 
-    height: calc(100vh - 44px);
+    height: 100vh
 }
 
 .body  {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 55px;
 }
 
 .panel {

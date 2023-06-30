@@ -5,54 +5,53 @@
   padding: 0;
 }
 
-
-
 body {
   font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
-
 
 nav {
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 44px;
+
+  transition: height 0.5s;
 }
-
-
 
 nav ul {
   list-style-type: none;
   display: flex;
 }
 
-
-
 nav ul li {
   margin: 0 10px;
 }
 
-
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
   letter-spacing: 0.2px;
   transition: all 0.3s;
   padding: 10px;
+
+  transition: font-size 0.5s;
 }
-
-
 
 nav ul li a:hover {
   color: #ccc;
 }
 
-
-
 .main-content {
   margin-top: 1rem;
+}
+
+.nav_dropdown {
+  position: absolute;
+  height: 55px;
+  width: 100vw;
+}
+
+.li_dropdown {
+  display:flex; 
+  justify-content: space-inbetween
 }
