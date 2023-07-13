@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.item {
+    
+    color: white;
+    border-radius: 10px;
+    border-color: rgb(65, 65, 80);
+    background-color: rgb(56, 59, 59);
+    border-style: solid;
+    border-width: 10px;
+    width: 600px;
+    height: fit-content;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

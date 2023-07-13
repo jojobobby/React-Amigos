@@ -1,5 +1,5 @@
 import getWikiResults from "@/lib/getWikipediaResults";
-import { json } from "stream/consumers";
+import item from "./components/item";
 
 type Props = {
     params: {
@@ -32,7 +32,7 @@ export default async function SearchResults({ params: { searchTerm }} :Props) {
     const content = (
         <main className="bg-slate-800"> 
             {results 
-                ? Object.values(results).map(each => {return <p>{JSON.stringify(each)}</p>}) 
+                ? Object.values(results).map(result => {return item({ result: result})}) 
                 : <p> {`${searchTerm} Not Found.`} </p>}
         </main>
     )
