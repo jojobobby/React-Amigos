@@ -5,12 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "initalize": "chmod +x ./init/database.sh && ./init/database.sh",
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "@prisma/client": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^8.4.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.0.0"
   }
 }

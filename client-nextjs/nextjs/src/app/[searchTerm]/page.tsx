@@ -27,7 +27,7 @@ export async function generateMetadata({ params: { searchTerm }} :Props) {
 export default async function SearchResults({ params: { searchTerm }} :Props) {
     const wikiData: Promise<SearchResult> = getWikiResults(searchTerm) as Promise<SearchResult>; 
     const data = await wikiData;
-    const results: Result[] | undefined = data?.query?.pages
+    const results: Result[] | undefined = data?.query?.pages;
     
     const content = (
         <main className="bg-slate-800"> 
