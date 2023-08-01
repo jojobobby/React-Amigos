@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .item {
-    
     color: white;
     border-radius: 10px;
     border-color: rgb(65, 65, 80);
