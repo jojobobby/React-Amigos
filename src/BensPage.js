@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
 import './App.css';
 import Board from './bensFiles/ben-tttgame.js';
+import SignUpForm from './bensFiles/ben-signupform';
+import MyCalculator from './bensFiles/ben-calculator';
+import SB from './bensFiles/ben-scoreboard';
 
 function BenPage() {
   return (
@@ -10,6 +12,9 @@ function BenPage() {
       </header> 
       <BenButton />
       <Board />
+      <SignUpForm />
+      <MyCalculator />
+      <SB />
     </div>
   );
 }
